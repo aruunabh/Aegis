@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis - Tactical Command</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="controls">
+            <h2>Aegis Command</h2>
+            <div class="form-group">
+                <label>Plane Type:</label>
+                <select id="planeType">
+                    <option value="FIGHTER">Fighter Jet (Fast, Low Fuel)</option>
+                    <option value="BOMBER">Heavy Bomber (Slow, High Fuel)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Target Coordinates (X, Y):</label>
+                <div class="coord-inputs">
+                    <input type="number" id="targetX" placeholder="X" value="400">
+                    <input type="number" id="targetY" placeholder="Y" value="400">
+                </div>
+            </div>
+            <button id="dispatchBtn">Dispatch Unit</button>
+            
+            <div class="log" id="systemLog">
+                <p>System initialized...</p>
+            </div>
+        </div>
+        <div class="radar-container">
+            <canvas id="radarCanvas" width="800" height="600"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
